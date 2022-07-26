@@ -576,9 +576,9 @@ footer #social-platforms {
   top:50px;
   font-size:1rem;
   text-align:center;
-  height:250px;
+  height:300px;
   overflow:hidden;
-   background: #ffffff;
+  background: #ffffff;
   background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #F2F2F2 50%, #F2F2F2 50%, #F2F2F2 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#ffffff), color-stop(50%,#F2F2F2), color-stop(50%,#F2F2F2), color-stop(100%,#F2F2F2));
   background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
