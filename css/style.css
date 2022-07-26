@@ -568,7 +568,12 @@ section .title::after{
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
-footer h1 {font-size:1.5em;margin-bottom:55px;}
+footer h1 {
+    font-size:1.5em;
+    margin-bottom:55px;
+    padding: 14px;
+}
+
 
 footer #social-platforms {
   position:relative;
@@ -783,6 +788,7 @@ footer .btn-linkedin > span {
     .max-width{
         padding: 0 23px;
     }
+	
     .home .home-content .text-2{
         font-size: 60px;
     }
@@ -795,6 +801,10 @@ footer .btn-linkedin > span {
     .services .serv-content .card{
         width: 100%;
     }
+	footer h1 {
+    font-size:1em;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -825,6 +835,9 @@ footer .btn-linkedin > span {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+		footer h1 {
+    font-size:1em;
     }
 }
 
