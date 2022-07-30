@@ -35,13 +35,14 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .teams, .contact, .blog, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.contact .contact-content{
+.contact .contact-content, 
+.blog .blog-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -117,7 +118,7 @@ section .title::after{
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 500;
-    margin: 0 2rem;
+    margin: 0 1.2rem;
     position: relative;
     transition: color 0.4s ease-in-out;
 }
@@ -406,10 +407,10 @@ section .title::after{
 .teams .title::after{
     content: "yorumlar";
 }
-.teams .carousel .card{
+.teams .carousel .card {
     background: #222;
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 20px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -424,9 +425,7 @@ section .title::after{
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
+
 .teams .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
@@ -441,9 +440,7 @@ section .title::after{
     border: 5px solid #FFA500;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
+
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -465,6 +462,9 @@ section .title::after{
 .owl-dot:hover{
     background: rgb(39, 177, 241)!important; 
 }
+
+
+
 
 /* contact section styling */
 .contact {
@@ -574,7 +574,6 @@ footer h1 {
     padding: 14px;
 }
 
-
 footer #social-platforms {
   position:relative;
   padding-top: 25px;
@@ -583,7 +582,7 @@ footer #social-platforms {
   text-align:center;
   height:300px;
   overflow:hidden;
-  background: #ffffff;
+   background: #ffffff;
   background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #F2F2F2 50%, #F2F2F2 50%, #F2F2F2 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#ffffff), color-stop(50%,#F2F2F2), color-stop(50%,#F2F2F2), color-stop(100%,#F2F2F2));
   background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
@@ -709,16 +708,29 @@ footer .btn-linkedin > span {
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 300px;
     }
+      .blog .blog-content .right img{
+        height: 250px;
+        width: 250px;
+    }
+     .blog .blog-content .right img{
+    margin-top: 32px;
+    align-items: center;
+     }
 }
 
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
     }
+     .blog .blog-content .right img{
+    margin-top: 32px;
+    align-items: center;
+     }
 }
+
 @media (max-width: 947px){
     .menu-btn{
         display: block;
@@ -773,6 +785,18 @@ footer .btn-linkedin > span {
     .about .about-content .right{
         flex: 100%;
     }
+
+    .blog .blog-content .column{
+        width: 100%;
+    }
+    .blog .blog-content .right{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .blog .blog-content .left{
+        flex: 100%;
+    }
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -782,13 +806,20 @@ footer .btn-linkedin > span {
         width: 100%;
         margin-bottom: 35px;
     }
+     .blog .blog-content .right img{
+    margin-top: 32px;
+    align-items: center;
+     }
+     
 }
 
 @media (max-width: 690px) {
     .max-width{
         padding: 0 23px;
     }
-	
+    footer h1 {
+    font-size:1em;
+    }
     .home .home-content .text-2{
         font-size: 60px;
     }
@@ -801,13 +832,17 @@ footer .btn-linkedin > span {
     .services .serv-content .card{
         width: 100%;
     }
-	footer h1 {
-    font-size:1em;
-    }
-
+    .blog .blog-content .right img{
+    margin-top: 32px;
+    align-items: center;
+     }
+   
 }
 
 @media (max-width: 500px) {
+     footer h1 {
+    font-size:1em;
+    }
     .home .home-content .text-2{
         font-size: 50px;
     }
@@ -815,7 +850,8 @@ footer .btn-linkedin > span {
         font-size: 27px;
     }
     .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .skills .skills-content .left .text
+    .blog .blog-content .righ .text{
         font-size: 19px;
     }
     .contact .right form .fields{
@@ -836,9 +872,11 @@ footer .btn-linkedin > span {
         font-size: 23px;
         line-height: 38px;
     }
-		footer h1 {
-    font-size:1em;
-    }
+
+     .blog .blog-content .right img{
+    margin-top: 52px;
+    align-items: center;
+     }
 }
 
 
@@ -870,7 +908,7 @@ footer .btn-linkedin > span {
 	font-size: 17px;
 	font-weight: bold;
 	text-decoration: none;
-  transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 
   border-radius: 8px;
 }
@@ -970,4 +1008,124 @@ footer .btn-linkedin > span {
 .icon-bar .content {
   margin-left: 75px;
   font-size: 30px;
+}
+
+
+/**wg-box-content-overlay style**/
+
+
+.card .box .wg-box-content-overlay {
+  background: rgba(0,0,0,0.9);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.card .box:hover .wg-box-content-overlay{
+  opacity: 1;
+  
+  
+}
+
+.card .box .wg-box-content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.box:hover .wg-box-content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.box .wg-box-content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.box .wg-box-content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+.box .fadeIn-bottom{
+  top: 80%;
+}
+
+
+
+
+
+
+
+
+/**trst ***/
+
+
+
+/* blog section styling */
+.blog .title::after{
+    content: "blogum";
+}
+.blog .blog-content .right{
+    width: 40%;
+}
+.blog .blog-content .right img{
+    height: 270px;
+    width: auto;
+    float: right;
+    object-fit: cover;
+    border-radius: 126px 36px 126px 36px;
+}
+.blog .blog-content .left{
+    width: 55%;
+}
+.blog .blog-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.blog .blog-content .left .text span{
+    color: rgb(39, 177, 241);
+}
+.blog .blog-content .left p{
+    text-align: justify;
+}
+.blog .blog-content .left a{
+    display: inline-block;
+    background: rgb(39, 177, 241);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(39, 177, 241);
+    transition: all 0.3s ease;
+}
+.blog .blog-content .left a:hover{
+    color: rgb(39, 177, 241);
+    background: none;
 }
